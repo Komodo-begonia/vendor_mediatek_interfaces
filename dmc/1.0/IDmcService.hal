@@ -1,0 +1,31 @@
+/*
+ * Copyright (C) 2016 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package vendor.mediatek.hardware.dmc@1.0;
+
+import IDmcEventCallback;
+
+interface IDmcService {
+    createSession(dmcSessionConfig_t config) generates (dmcResult_e ret, SID sessionId);
+    closeSession(SID sessionId) generates (dmcResult_e ret);
+    registerEventCallback(SID sessionId, IDmcEventCallback callback) generates (dmcResult_e ret);
+    invokeInt(SID sessionId, dmcCommand_e command, dmcObjectId_t objectId, int32_t param) generates (dmcResult_e ret);
+    invokeString(SID sessionId, dmcCommand_e command, dmcObjectId_t objectId, string param) generates (dmcResult_e ret);
+    queryEvent(SID sessionId, dmcObjectId_t objectId) generates (dmcResult_e ret, dmcValue_t eventValue);
+    subscribe(SID sessionId, dmcObjectId_t objectId) generates (dmcResult_e ret);
+    unsubscribe(SID sessionId, dmcObjectId_t objectId) generates (dmcResult_e ret);
+    getSessionStats(SID sessionId, GID group) generates (dmcResult_e ret, dmcSessionStats_t stats);
+};
