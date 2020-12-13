@@ -1,0 +1,83 @@
+/*
+ * Copyright (C) 2016 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package vendor.mediatek.hardware.keyinstall@1.0;
+
+enum Result : int32_t {
+    OK,
+    NOT_INITIALIZED,
+    INVALID_ARGUMENTS,
+    INVALID_STATE,
+    NOT_SUPPORTED
+};
+
+struct HIDL_FT_H {
+    uint16_t    token;
+    uint16_t    id;
+};
+
+struct HIDL_FT_DRMKEY_INSTALL_SET_REQ {
+    uint32_t    file_size;
+    uint8_t     stage;
+};
+
+struct HIDL_FT_DRMKEY_INSTALL_QUERY_REQ {
+    uint32_t    req; //unused
+};
+
+enum HIDL_FT_DRMKEY_INSTALL_OP : uint32_t {
+    HIDL_FT_DRMKEY_INSTALL_SET = 0,
+    HIDL_FT_DRMKEY_INSTALL_QUERY,
+    HIDL_FT_DRMKEY_INSTALL_END,
+};
+
+enum HIDL_FT_DRMKEY_INSTALL_RESULT : int32_t {
+    HIDL_DRMKEY_INSTALL_OK = 0,
+    HIDL_DRMKEY_INSTALL_FAIL = -1,
+    HIDL_DRMKEY_INSTALL_VERIFY_FAIL = -2,
+};
+
+struct HIDL_FT_DRMKEY_INSTALL_CMD_U {
+    HIDL_FT_DRMKEY_INSTALL_SET_REQ       set_req;
+    HIDL_FT_DRMKEY_INSTALL_QUERY_REQ     query_req;
+};
+
+struct HIDL_DRMKEY_INSTALL_SET_CNF {
+    uint32_t    result;
+};
+
+struct HIDL_DRMKEY_INSTALL_QUERY_CNF {
+    uint32_t        keycount;
+    uint32_t[512]   keytype;
+};
+
+union HIDL_FT_DRMKEY_INSTALL_CNF_U {
+    HIDL_DRMKEY_INSTALL_SET_CNF      set_cnf;
+    HIDL_DRMKEY_INSTALL_QUERY_CNF    keyresult;
+};
+
+struct HIDL_FT_DRMKEY_INSTALL_CNF {
+    HIDL_FT_H                        header;
+    HIDL_FT_DRMKEY_INSTALL_OP        op;
+    HIDL_FT_DRMKEY_INSTALL_RESULT    status;
+    HIDL_FT_DRMKEY_INSTALL_CNF_U     result;
+};
+
+struct HIDL_FT_DRMKEY_INSTALL_REQ {
+    HIDL_FT_H                        header;
+    HIDL_FT_DRMKEY_INSTALL_OP        op;
+    HIDL_FT_DRMKEY_INSTALL_CMD_U     cmd;
+};

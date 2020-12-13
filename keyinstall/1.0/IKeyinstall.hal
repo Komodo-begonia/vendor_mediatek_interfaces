@@ -1,0 +1,36 @@
+/*
+ * Copyright (C) 2016 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package vendor.mediatek.hardware.keyinstall@1.0;
+
+/*
+ * This interface is used by meta_tst to communicate with DRM key installation TLC.
+ */
+interface IKeyinstall {
+    /*
+     * The current version (1.0) of keyinstall HIDL only supports the data defined
+     * in the following key types,
+     * 1. HDCP 1.X TX/RX
+     * 2. HDCP 2.X RX
+     * 3. Widevine
+     *
+     * @param fromClient_req contains req parameters from meta_tst
+     * @param fromClient_cnf contains cnf parameters from meta_tst
+     * @param data is partial data from meta_tst
+     * @param len is data size
+     */
+    meta_drmkey_install_op(HIDL_FT_DRMKEY_INSTALL_REQ fromClient_req, HIDL_FT_DRMKEY_INSTALL_CNF fromClient_cnf, vec<uint8_t> data, uint16_t len) generates(HIDL_FT_DRMKEY_INSTALL_CNF toClient_cnf);
+};
