@@ -12,14 +12,5 @@ hidl_interface {
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    types: [
-        "CallEventWithRat_t_v1",
-        "apmKpiHeader_t",
-        "apmResult_e",
-        "callDirection_e",
-        "callStatus_e",
-        "callType_e",
-        "ratInfo_e",
-    ],
     gen_java: true,
 }

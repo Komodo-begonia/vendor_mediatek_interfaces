@@ -15,8 +15,5 @@ hidl_interface {
         "vendor.mediatek.hardware.mms@1.2",
         "vendor.mediatek.hardware.mms@1.3",
     ],
-    types: [
-        "HwCopybitParamProfile",
-    ],
-    gen_java: false,
+    gen_java: true,
 }

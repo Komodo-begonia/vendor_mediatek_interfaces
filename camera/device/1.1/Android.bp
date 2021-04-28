@@ -14,13 +14,5 @@ hidl_interface {
         "android.hardware.camera.device@1.0",
         "android.hidl.base@1.0",
     ],
-    types: [
-        "MtkCmdMsg",
-        "MtkDataCallbackMsg",
-        "MtkDataCallbackMsgExt",
-        "MtkMetadataCallbackMsg",
-        "MtkNotifyCallbackMsg",
-        "MtkNotifyCallbackMsgExt",
-    ],
-    gen_java: false,
+    gen_java: true,
 }

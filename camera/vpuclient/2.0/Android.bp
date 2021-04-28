@@ -14,14 +14,5 @@ hidl_interface {
         "android.hardware.graphics.common@1.0",
         "android.hidl.base@1.0",
     ],
-    types: [
-        "VpuBufferFormat",
-        "VpuBuffer_t",
-        "VpuCoreIndex",
-        "VpuExtraParam_t",
-        "VpuPlane",
-        "VpuRequest_t",
-        "VpuStatus_t",
-    ],
-    gen_java: false,
+    gen_java: true,
 }

@@ -12,16 +12,5 @@ hidl_interface {
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    types: [
-        "Control",
-        "Deemphasis",
-        "Direction",
-        "Event",
-        "Rds",
-        "Region",
-        "Result",
-        "SearchMode",
-        "Spacing",
-    ],
     gen_java: true,
 }

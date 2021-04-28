@@ -13,12 +13,5 @@ hidl_interface {
         "vendor.mediatek.hardware.mms@1.0",
         "vendor.mediatek.hardware.mms@1.1",
     ],
-    types: [
-        "DpPqParam",
-        "MDPParam",
-        "MMS_MEDIA_TYPE_ENUM",
-        "MMS_PROFILE_ENUM",
-        "PqEnableFlag",
-    ],
-    gen_java: false,
+    gen_java: true,
 }

@@ -11,9 +11,5 @@ hidl_interface {
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    types: [
-        "EDID_t",
-        "Result",
-    ],
     gen_java: true,
 }

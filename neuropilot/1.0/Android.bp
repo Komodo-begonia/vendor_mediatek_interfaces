@@ -12,8 +12,5 @@ hidl_interface {
         "android.hardware.neuralnetworks@1.0",
         "android.hidl.base@1.0",
     ],
-    types: [
-        "DeviceComponent",
-    ],
     gen_java: false,
 }

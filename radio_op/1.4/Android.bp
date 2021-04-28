@@ -17,10 +17,5 @@ hidl_interface {
         "vendor.mediatek.hardware.radio_op@1.2",
         "vendor.mediatek.hardware.radio_op@1.3",
     ],
-    types: [
-        "RsuRequest",
-        "RsuRequestInfo",
-        "RsuResponseInfo",
-    ],
     gen_java: true,
 }

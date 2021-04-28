@@ -14,5 +14,5 @@ hidl_interface {
         "android.hidl.base@1.0",
         "vendor.mediatek.hardware.camera.device@1.1",
     ],
-    gen_java: false,
+    gen_java: true,
 }

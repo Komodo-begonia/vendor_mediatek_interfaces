@@ -18,14 +18,5 @@ hidl_interface {
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    types: [
-        "Error",
-        "FpsPolicyInfo",
-        "FpsRange",
-        "FpsRequest",
-        "HwcInfo",
-        "PanelInfo",
-        "SimpleInputWindowInfo",
-    ],
     gen_java: true,
 }

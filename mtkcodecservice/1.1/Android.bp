@@ -13,12 +13,5 @@ hidl_interface {
         "android.hidl.base@1.0",
         "android.hidl.memory@1.0",
     ],
-    types: [
-        "apeCreateParams",
-        "apeDecParams",
-        "apeDecRetParams",
-        "apeInitParams",
-        "apeResetParams",
-    ],
     gen_java: false,
 }

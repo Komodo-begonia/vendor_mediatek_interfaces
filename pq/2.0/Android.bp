@@ -11,15 +11,5 @@ hidl_interface {
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    types: [
-        "PQFeatureID",
-        "Result",
-        "dispPQIndexParams",
-        "dispPQIoctlParams",
-        "dispPQWinParams",
-        "display_dc",
-        "globalPQIndex_t",
-        "ioctlRequest",
-    ],
-    gen_java: false,
+    gen_java: true,
 }

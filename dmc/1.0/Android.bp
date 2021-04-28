@@ -12,13 +12,5 @@ hidl_interface {
     interfaces: [
         "android.hidl.base@1.0",
     ],
-    types: [
-        "dmcCommand_e",
-        "dmcObjectId_t",
-        "dmcResult_e",
-        "dmcSessionConfig_t",
-        "dmcSessionStats_t",
-        "dmcValue_t",
-    ],
     gen_java: true,
 }

@@ -12,19 +12,7 @@ hidl_interface {
     ],
     interfaces: [
         "android.hardware.graphics.common@1.0",
-        "android.hardware.graphics.common@1.1",
         "android.hidl.base@1.0",
     ],
-    types: [
-        "ISPBuffer",
-        "ISPFeatureTagInfo",
-        "ISPFormat",
-        "ISPRequest",
-        "ISPResult",
-        "ISPStream",
-        "ISPStreamConfiguration",
-        "MetaDataType",
-        "Status",
-    ],
-    gen_java: false,
+    gen_java: true,
 }

@@ -14,15 +14,5 @@ hidl_interface {
         "android.hardware.power@1.2",
         "android.hidl.base@1.0",
     ],
-    types: [
-        "MtkActState",
-        "MtkDfpsMode",
-        "MtkDispMode",
-        "MtkHintOp",
-        "MtkPowerCmd",
-        "MtkPowerHint",
-        "MtkQueryCmd",
-        "MtkScreenState",
-    ],
     gen_java: true,
 }

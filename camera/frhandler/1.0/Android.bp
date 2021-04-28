@@ -17,9 +17,5 @@ hidl_interface {
         "android.hidl.memory@1.0",
         "vendor.mediatek.hardware.camera.security@1.0",
     ],
-    types: [
-        "FRCbParam",
-        "FRImageFormat",
-    ],
     gen_java: false,
 }

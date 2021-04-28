@@ -12,5 +12,5 @@ hidl_interface {
         "vendor.mediatek.hardware.pq@2.0",
         "vendor.mediatek.hardware.pq@2.1",
     ],
-    gen_java: false,
+    gen_java: true,
 }
