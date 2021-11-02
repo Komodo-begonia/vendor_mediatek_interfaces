@@ -16,7 +16,7 @@
 
 package vendor.mediatek.hardware.radio@3.19;
 
-import android.hardware.radio@1.0::types:RadioResponseInfo;
+import android.hardware.radio@1.0::types;
 import @3.18::IRadioResponse;
 
 /**

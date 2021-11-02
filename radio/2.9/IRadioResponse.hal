@@ -18,7 +18,7 @@ package vendor.mediatek.hardware.radio@2.9;
 
 import @2.8::IRadioResponse;
 import android.hardware.radio@1.1::types;
-import android.hardware.radio@1.0::types:RadioResponseInfo;
+import android.hardware.radio@1.0::types;
 
 /**
  * Interface declaring response functions to solicited radio requests.
